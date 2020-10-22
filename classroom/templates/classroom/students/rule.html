@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Let's Quiz | Welcome {% endblock title %}
+{% block content %}
+<div class="container my-4">
+    <div class="jumbotron">
+
+	    
+	      <h3 class="text-info text-center">Before you start the exam, here are the rules</h3>
+
+        <div class="row ">
+            <div class="col-3"></div>
+            <div class="col-6">
+            <div class="card border-info mx-4 my-4">
+                <div class="card-body text-info">
+                    <h4 class="card-title">Rules :</h4>
+                    <p class="card-text">
+                        <ul style="list-style:decimal;">
+                            <li>All questions are multiple choice question.</li>
+                            <li><span class="text-danger">Only one choice is correct.</span></li>
+                            <li>Every question carry equal marks
+                            </li>
+                            <li>Every question is displayed only once per user.</li>
+                        </ul>
+                    </p>
+                    <a href="{% url 'students:quiz_list' %}" class="btn btn-info">Login to start exam!</a>
+                </div>  
+                <div class="card-footer">All the best !!</div>  
+            </div>
+        </div>  
+    </div>
+    </div>
+</div>
+{% endblock content %}
